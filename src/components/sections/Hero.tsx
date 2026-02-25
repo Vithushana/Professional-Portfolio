@@ -4,7 +4,7 @@ import { MapPin, Code, Mail, Github, Linkedin, FileText, ExternalLink } from "lu
 
 export default function Hero() {
   return (
-    <section id="home" className="py-16 md:py-24 overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50/40 to-indigo-50">
+    <section id="home" className="py-16 md:py-24 bg-gradient-to-br from-slate-50 via-blue-50/40 to-indigo-50">
       <Container>
         <div className="grid gap-12 md:grid-cols-2 md:items-center">
           <div className="opacity-0-initial animate-slideInLeft space-y-6">

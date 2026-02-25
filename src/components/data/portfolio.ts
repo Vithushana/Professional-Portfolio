@@ -3,7 +3,8 @@ export const portfolio = {
   role: "Trainee – Software Engineer @ SenzMate IoT Intelligence",
   location: "Sri Lanka",
   phone: "0763425210",
-  profileImage: "/profile.jpg",
+  // Use Vite base URL so the image path works both locally and on GitHub Pages
+  profileImage: import.meta.env.BASE_URL + "profile.jpg",
   summary:
     "IoT/AI-driven full-stack dev focused on device analytics, automation, and clean UX. I build reactive dashboards, microservices, and data pipelines that actually ship.",
   education: {

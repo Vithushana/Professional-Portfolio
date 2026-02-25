@@ -20,17 +20,20 @@ export default function Navbar() {
       <Container>
         <div className="flex h-16 items-center justify-between">
           <a href="#home" className="group flex items-center gap-3">
-            <img 
-              src="/profile.jpg" 
+            <img
+              src={portfolio.profileImage}
               alt={portfolio.name}
               className="h-11 w-11 rounded-lg object-cover shadow-md ring-2 ring-indigo-200 group-hover:scale-105 group-hover:ring-indigo-400 transition-all"
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
-                target.style.display = 'none';
-                const fallback = document.createElement('div');
-                fallback.className = 'flex h-11 w-11 items-center justify-center rounded-lg bg-gradient-to-br from-indigo-600 to-purple-600 text-white font-bold shadow-md text-lg';
-                fallback.textContent = portfolio.name.split(' ').map(n => n[0]).join('');
-                target.parentElement?.appendChild(fallback);
+                target.style.display = "none";
+                const parent = target.parentElement;
+                if (!parent) return;
+                const fallback = document.createElement("div");
+                fallback.className =
+                  "flex h-11 w-11 items-center justify-center rounded-lg bg-gradient-to-br from-indigo-600 to-purple-600 text-white font-bold shadow-md text-lg";
+                fallback.textContent = portfolio.name.split(" ").map((n) => n[0]).join("");
+                parent.appendChild(fallback);
               }}
             />
             <span className="text-xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
