@@ -18,7 +18,7 @@ export default function App() {
       <ScrollToTop />
       <div className="relative z-10">
         <Navbar />
-        <main>
+        <main className="pt-16 md:pt-20">
           <Hero />
           <About />
           <Experience />

@@ -24,6 +24,17 @@ body {
   min-height: 100vh;
 }
 
+/* Ensure sections are scrolled into view below the sticky navbar */
+section {
+  scroll-margin-top: 4.5rem; /* approx header height */
+}
+
+@media (min-width: 768px) {
+  section {
+    scroll-margin-top: 5.5rem;
+  }
+}
+
 /* Custom Animations */
 @keyframes fadeIn {
   from {
