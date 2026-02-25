@@ -1,0 +1,13 @@
+/* Custom app-specific styles */
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optional: Add any custom utility classes here */
